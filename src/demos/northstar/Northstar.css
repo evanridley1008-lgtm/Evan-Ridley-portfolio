@@ -1,0 +1,568 @@
+.northstar {
+  min-height: 100vh;
+  background: #0a0b09;
+  color: #f1f3eb;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.northstar * {
+  box-sizing: border-box;
+}
+
+.northstar a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* NAVIGATION */
+
+.ns-nav {
+  max-width: 1300px;
+  margin: auto;
+  padding: 28px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #252822;
+}
+
+.ns-logo {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.ns-logo span {
+  color: #c7f36b;
+}
+
+.ns-nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.ns-nav-links a {
+  color: #898d83;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: 0.2s;
+}
+
+.ns-nav-links a:hover {
+  color: #c7f36b;
+}
+
+.ns-nav-button {
+  padding: 11px 17px;
+
+  background: #c7f36b;
+  color: #0a0b09 !important;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+
+  border-radius: 3px;
+}
+
+
+/* HERO */
+
+.ns-hero {
+  max-width: 1300px;
+  min-height: 720px;
+  margin: auto;
+  padding: 100px 30px 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background:
+    radial-gradient(
+      circle at 80% 35%,
+      rgba(199, 243, 107, 0.09),
+      transparent 30%
+    );
+}
+
+.ns-hero-content {
+  max-width: 1000px;
+}
+
+.ns-tag {
+  color: #c7f36b;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2.5px;
+  margin-bottom: 25px;
+}
+
+.ns-hero h1 {
+  margin: 0;
+
+  font-size: clamp(75px, 13vw, 180px);
+  line-height: 0.78;
+  letter-spacing: -9px;
+  font-weight: 900;
+}
+
+.ns-hero h1 span,
+.ns-about h2 span,
+.ns-programme-heading h2 span,
+.ns-result-layout h2 span,
+.ns-contact h2 span {
+  color: #c7f36b;
+}
+
+.ns-hero-text {
+  max-width: 500px;
+  margin-top: 45px;
+
+  color: #8b8f86;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.ns-hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.ns-primary-button {
+  padding: 15px 22px;
+
+  background: #c7f36b;
+  color: #0a0b09;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.ns-secondary-button {
+  padding: 15px 22px;
+
+  border: 1px solid #34382f;
+
+  color: #c2c5bd;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+
+/* HERO STATS */
+
+.ns-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 180px);
+  gap: 60px;
+
+  border-top: 1px solid #252822;
+  padding-top: 25px;
+}
+
+.ns-hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.ns-hero-stats strong {
+  font-size: 34px;
+  letter-spacing: -2px;
+}
+
+.ns-hero-stats span {
+  color: #73776f;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+}
+
+
+/* SHARED SECTION LABEL */
+
+.ns-section-label {
+  color: #60645c;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+
+/* ABOUT */
+
+.ns-about {
+  max-width: 1300px;
+  margin: auto;
+  padding: 130px 30px;
+
+  border-top: 1px solid #252822;
+}
+
+.ns-about-content {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: 100px;
+}
+
+.ns-about h2 {
+  font-size: clamp(55px, 8vw, 105px);
+  line-height: 0.85;
+  letter-spacing: -6px;
+}
+
+.ns-about-content > div:last-child {
+  padding-top: 15px;
+}
+
+.ns-about-content p {
+  max-width: 450px;
+
+  color: #898d84;
+  font-size: 17px;
+  line-height: 1.8;
+
+  margin-bottom: 20px;
+}
+
+.ns-text-link {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: #c7f36b !important;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+
+/* PROGRAMMES */
+
+.ns-programmes {
+  max-width: 1300px;
+  margin: auto;
+  padding: 100px 30px 140px;
+
+  border-top: 1px solid #252822;
+}
+
+.ns-programme-heading {
+  margin: 70px 0 60px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.ns-programme-heading h2 {
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.85;
+  letter-spacing: -5px;
+}
+
+.ns-programme-heading p {
+  max-width: 350px;
+  color: #898d84;
+  line-height: 1.7;
+}
+
+.ns-programme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.ns-programme {
+  min-height: 360px;
+
+  padding: 25px;
+
+  background: #11130f;
+  border: 1px solid #292d26;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: 0.25s;
+}
+
+.ns-programme:hover {
+  transform: translateY(-5px);
+  border-color: #c7f36b;
+}
+
+.ns-featured {
+  background: #c7f36b;
+  color: #0a0b09;
+}
+
+.ns-programme-number {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.ns-programme-type {
+  font-size: 10px !important;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.ns-programme h3 {
+  font-size: 45px;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+}
+
+.ns-programme p {
+  max-width: 330px;
+
+  color: #858a7e;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.ns-featured p {
+  color: #343a2d;
+}
+
+.ns-arrow {
+  font-size: 30px;
+  align-self: flex-end;
+}
+
+
+/* RESULTS */
+
+.ns-results {
+  max-width: 1300px;
+  margin: auto;
+  padding: 120px 30px;
+
+  border-top: 1px solid #252822;
+}
+
+.ns-result-layout {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.ns-result-layout h2 {
+  font-size: clamp(55px, 7vw, 90px);
+  line-height: 0.85;
+  letter-spacing: -5px;
+}
+
+.ns-result-layout > div:first-child p {
+  max-width: 400px;
+  margin-top: 30px;
+
+  color: #898d84;
+  line-height: 1.8;
+}
+
+.ns-result-card {
+  min-height: 280px;
+
+  padding: 30px;
+
+  border: 1px solid #34382f;
+  background: #11130f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ns-result-top,
+.ns-result-bottom {
+  display: flex;
+  justify-content: space-between;
+
+  color: #70756b;
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.ns-result-number {
+  color: #c7f36b;
+
+  font-size: 100px;
+  font-weight: 900;
+  letter-spacing: -7px;
+}
+
+
+/* CONTACT */
+
+.ns-contact {
+  max-width: 1300px;
+  margin: auto;
+
+  padding: 130px 30px;
+
+  background: #c7f36b;
+  color: #0a0b09;
+
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 100px;
+}
+
+.ns-contact .ns-tag {
+  color: #343c28;
+}
+
+.ns-contact h2 {
+  font-size: clamp(65px, 9vw, 115px);
+  line-height: 0.8;
+  letter-spacing: -7px;
+}
+
+.ns-contact h2 span {
+  color: #3c4a24;
+}
+
+.ns-contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.ns-contact-right p {
+  max-width: 350px;
+  color: #414b31;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.ns-contact-right a {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+
+/* FOOTER */
+
+.ns-footer {
+  max-width: 1300px;
+  margin: auto;
+
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #62665e;
+}
+
+.ns-footer p {
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .ns-nav-links {
+    display: none;
+  }
+
+  .ns-nav {
+    padding: 22px 20px;
+  }
+
+  .ns-nav-button {
+    display: none;
+  }
+
+  .ns-hero {
+    min-height: 650px;
+    padding: 80px 20px 40px;
+  }
+
+  .ns-hero h1 {
+    font-size: 75px;
+    letter-spacing: -5px;
+  }
+
+  .ns-hero-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .ns-hero-stats strong {
+    font-size: 25px;
+  }
+
+  .ns-about,
+  .ns-programmes,
+  .ns-results {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .ns-about-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .ns-programme-heading {
+    display: block;
+  }
+
+  .ns-programme-heading p {
+    margin-top: 30px;
+  }
+
+  .ns-programme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ns-result-layout {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .ns-contact {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding: 90px 20px;
+  }
+
+  .ns-contact h2 {
+    letter-spacing: -5px;
+  }
+
+  .ns-footer {
+    padding: 25px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+}
