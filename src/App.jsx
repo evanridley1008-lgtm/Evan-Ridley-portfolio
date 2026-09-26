@@ -2,23 +2,41 @@ import { useState } from "react"
 import "./index.css"
 import Northstar from "./demos/northstar/Northstar"
 
-function Portfolio() {
+
+function Portfolio({ openNorthstar }) {
+
   return (
+
     <div className="site">
 
       {/* NAVIGATION */}
 
       <header className="navbar">
+
         <a href="#home" className="logo">
           Evan Ridley
         </a>
 
         <nav>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
+
+          <a href="#services">
+            Services
+          </a>
+
+          <a href="#projects">
+            Projects
+          </a>
+
+          <a href="#skills">
+            Skills
+          </a>
+
+          <a href="#contact">
+            Contact
+          </a>
+
         </nav>
+
       </header>
 
 
@@ -228,17 +246,24 @@ function Portfolio() {
 
                 <div className="tech">
 
-                  <span>React</span>
-                  <span>Vite</span>
-                  <span>CSS</span>
+                  <span>
+                    React
+                  </span>
+
+                  <span>
+                    Vite
+                  </span>
+
+                  <span>
+                    CSS
+                  </span>
 
                 </div>
 
+
                 <button
                   className="project-link"
-                  onClick={() => {
-                    window.location.hash = "northstar"
-                  }}
+                  onClick={openNorthstar}
                 >
                   View project →
                 </button>
@@ -257,11 +282,14 @@ function Portfolio() {
                 <div className="fake-dashboard">
 
                   <div className="fake-sidebar">
+
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
+
                   </div>
+
 
                   <div className="fake-main">
 
@@ -310,9 +338,17 @@ function Portfolio() {
 
                 <div className="tech">
 
-                  <span>React</span>
-                  <span>JavaScript</span>
-                  <span>CSS</span>
+                  <span>
+                    React
+                  </span>
+
+                  <span>
+                    JavaScript
+                  </span>
+
+                  <span>
+                    CSS
+                  </span>
 
                 </div>
 
@@ -376,9 +412,17 @@ function Portfolio() {
 
                 <div className="tech">
 
-                  <span>React</span>
-                  <span>Supabase</span>
-                  <span>JavaScript</span>
+                  <span>
+                    React
+                  </span>
+
+                  <span>
+                    Supabase
+                  </span>
+
+                  <span>
+                    JavaScript
+                  </span>
 
                 </div>
 
@@ -508,12 +552,22 @@ function Portfolio() {
             improving or adding to, get in touch.
           </p>
 
+
           <a
-            href="mailto:your-email@example.com"
+            href="mailto:evanridley1008@gmail.com"
             className="button primary"
           >
             Contact me
           </a>
+
+
+          <p style={{
+            marginTop: "18px",
+            fontSize: "14px",
+            opacity: 0.7
+          }}>
+            evanridley1008@gmail.com
+          </p>
 
         </section>
 
@@ -539,6 +593,7 @@ function Portfolio() {
       </footer>
 
     </div>
+
   )
 }
 
@@ -551,18 +606,33 @@ function App() {
       : "portfolio"
   )
 
+
   const openNorthstar = () => {
+
     window.location.hash = "northstar"
+
     setPage("northstar")
+
+    window.scrollTo(0, 0)
+
   }
+
 
   const goBack = () => {
+
     window.location.hash = ""
+
     setPage("portfolio")
+
+    window.scrollTo(0, 0)
+
   }
 
+
   if (page === "northstar") {
+
     return (
+
       <div>
 
         <button
@@ -583,25 +653,25 @@ function App() {
           ← Back to portfolio
         </button>
 
+
         <Northstar />
 
       </div>
+
     )
+
   }
 
+
   return (
-    <div onClick={(event) => {
 
-      if (
-        event.target.classList.contains("project-link")
-      ) {
-        openNorthstar()
-      }
+    <Portfolio
+      openNorthstar={openNorthstar}
+    />
 
-    }}>
-      <Portfolio />
-    </div>
   )
+
 }
+
 
 export default App
